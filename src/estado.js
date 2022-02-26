@@ -1,4 +1,4 @@
-function calcularImpuesto(a) {
+function mostrarImpu(a) {
     var resp = 0;
     switch(a){
         case "UT":
@@ -20,5 +20,5 @@ function calcularImpuesto(a) {
     return resp;
   }
   
-  export default calcularImpuesto;
+  export default mostrarImpu;
   
