@@ -1,22 +1,24 @@
-const cant = document.querySelector("#cantidad-item");
-const form = document.querySelector("#cantidad-form");
-const div = document.querySelector("#resultado-div");
+import calcularImpuesto from "./estado";
+import multiplicar from "./multiplicador";
 
+const cant = document.querySelector("#cantidad-item");
 const precio = document.querySelector("#precio-item");
-const prec = document.querySelector("#precio-form");
-const resp1 = document.querySelector("#resultado-prec");
+const form = document.querySelector("#cantidad-form");
+const estado = document.querySelector("#estado-item");
+const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const firstNumber = Number.parseInt(cant.value);
-  
-  div.innerHTML = "<p> La cantidad es: " + firstNumber + "</p>";      
-});
-prec.addEventListener("submit", (event) => {
-  event.preventDefault();
-
   const SecondNumber = Number.parseInt(precio.value);
-  
-  resp1.innerHTML = "<p> La PrEcio es: " + SecondNumber + "</p>";      
+  const est = estado.value;
+  const precioNeto = multiplicar(firstNumber,SecondNumber);
+  const porceImpu = calcularImpuesto(est);
+
+  div.innerHTML = "<p>Cantidad de item: " + firstNumber + "</p>";      
+  div.innerHTML = div.innerHTML +  "<p>Precio por Item: " + SecondNumber + "</p>";
+  div.innerHTML = div.innerHTML +  "<p>Codigo de estado: " + est +"Porcentaje: "+porceImpu +"</p>";
+  div.innerHTML = div.innerHTML +  "<p>Precio Neto: " + precioNeto + "</p>";
+
 });

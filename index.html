@@ -3,20 +3,20 @@
     <form id="cantidad-form">
       <label for="cantidad-item">Cantidad Item:</label>
       <input type="number" id="cantidad-item"/>
-      <input type="submit" value="Valor"/>
+      <label for="precio-item">Precio Item:</label>
+      <input type="number" id="precio-item"/>      
+      <Select id = "estado-item">
+        <Option value = 'UT'> UT </option>        
+        <Option value = 'NV'> NV </option>        
+        <Option value = 'TX'> TX </option>        
+        <Option value = 'AL'> AL </option>
+        <Option value = 'CA'> CA </option>
+      </Select>  
+      <input type="submit" value="Totalizar"/>
     </form> 
     <div id="resultado-div"></div>
 
     <script type="module" src="./src/presenter.js"></script>
-    
-    <form id="precio-form">
-      <label for="precio-item">Precio Item:</label>
-      <input type="number" id="precio-item"/>
-      <input type="submit" value="Mostrar"/>
-    </form> 
-    <div id="resultado-prec"></div>
-
-    <script type="module" src="./src/presenter.js"></script>
-
+      
   </body>
 </html>
