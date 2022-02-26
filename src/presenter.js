@@ -18,7 +18,7 @@ form.addEventListener("submit", (event) => {
 
   div.innerHTML = "<p>Cantidad de item: " + firstNumber + "</p>";      
   div.innerHTML = div.innerHTML +  "<p>Precio por Item: " + SecondNumber + "</p>";
-  div.innerHTML = div.innerHTML +  "<p>Codigo de estado: " + est +"Porcentaje: "+porceImpu +"</p>";
-  div.innerHTML = div.innerHTML +  "<p>Precio Neto: " + precioNeto + "</p>";
+  div.innerHTML = div.innerHTML +  "<p>Codigo de estado: " + est +" Porcentaje: "+porceImpu +"</p>";
+  div.innerHTML = div.innerHTML +  "<p>Precio Neto ("+firstNumber+"*$"+SecondNumber+"): $" + precioNeto + "</p>";
 
 });
