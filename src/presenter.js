@@ -2,6 +2,7 @@ import mostrarImpu from "./estado";
 import multiplicar from "./multiplicador";
 import calcularImpuesto from "./calcularImpuesto";
 import mostrarDescu from "./Descuento";
+import calcularDes from "./calcularDescuento";
 
 const cant = document.querySelector("#cantidad-item");
 const precio = document.querySelector("#precio-item");
@@ -19,13 +20,13 @@ form.addEventListener("submit", (event) => {
   const porceImpu = mostrarImpu(est);
   const impu = calcularImpuesto(precioNeto,porceImpu);
   const porceDescu = mostrarDescu(firstNumber);
-  const descu = calcularImpuesto(precioNeto,porceDescu);
+  const des = calcularDes(3000,187.5,3);
 
   div.innerHTML = "<p>Cantidad de item: " + firstNumber + "</p>";      
   div.innerHTML = div.innerHTML +  "<p>Precio por Item: " + SecondNumber + "</p>";
   div.innerHTML = div.innerHTML +  "<p>Codigo de estado: " + est +"</p>";
   div.innerHTML = div.innerHTML +  "<p>Precio Neto ("+firstNumber+"*$"+SecondNumber+"): $" + precioNeto + "</p>";
   div.innerHTML = div.innerHTML +  "<p>Impuesto para "+ est+"(%"+porceImpu+"): $" + impu + "</p>";
-  div.innerHTML = div.innerHTML +  "<p>Descuento ("+porceDescu+"%): "+ descu+"</p>";
+  div.innerHTML = div.innerHTML +  "<p>Descuento ("+porceDescu+"%): "+ des +"</p>";
 
 });
