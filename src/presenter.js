@@ -19,12 +19,12 @@ form.addEventListener("submit", (event) => {
   const porceImpu = mostrarImpu(est);
   const impu = calcularImpuesto(precioNeto,porceImpu);
   const porceDescu = mostrarDescu(firstNumber);
+  const descu = calcularImpuesto(precioNeto,porceDescu);
 
   div.innerHTML = "<p>Cantidad de item: " + firstNumber + "</p>";      
   div.innerHTML = div.innerHTML +  "<p>Precio por Item: " + SecondNumber + "</p>";
   div.innerHTML = div.innerHTML +  "<p>Codigo de estado: " + est +" Porcentaje: "+porceImpu +"</p>";
   div.innerHTML = div.innerHTML +  "<p>Precio Neto ("+firstNumber+"*$"+SecondNumber+"): $" + precioNeto + "</p>";
   div.innerHTML = div.innerHTML +  "<p>Impuesto para "+ est+"(%"+porceImpu+"): $" + impu + "</p>";
-  div.innerHTML = div.innerHTML +  "<p>Descuento ("+porceDescu+"%):</p>";
-
+  div.innerHTML = div.innerHTML +  "<p>Descuento ("+porceDescu+"%): "+ descu+"</p>";
 });
