@@ -4,6 +4,8 @@ function mostrarDescu(a) {
         resp = 3.00; 
     else if(a>=3000 && a<7000)
         resp = 5.00;      
+    else if(a>=7000 && a<10000)
+        resp = 7.00;           
     return resp;
   }
 
