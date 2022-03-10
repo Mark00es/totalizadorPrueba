@@ -6,6 +6,9 @@ function mostrarImpu(a) {
     if(a == "TX"){
         resp = 6.25;        
     }
+    if(a="AL"){
+        resp=4.00;
+    }
     return resp;
   }
   
