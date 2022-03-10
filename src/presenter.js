@@ -1,4 +1,5 @@
 import calcularImpuesto from "./estado";
+import multiplicar from "./multiplicador";
 
 const cant = document.querySelector("#cantidad-item");
 const precio = document.querySelector("#precio-item");
@@ -13,9 +14,11 @@ form.addEventListener("submit", (event) => {
   const SecondNumber = Number.parseInt(precio.value);
   const est = estado.value;
   const porceImpu = calcularImpuesto(est);
+  const precioNeto = multiplicar(firstNumber,SecondNumber);
 
   div.innerHTML = "<p>Cantidad de item: " + firstNumber + "</p>";      
   div.innerHTML = div.innerHTML +  "<p>Precio por Item: " + SecondNumber + "</p>";
   div.innerHTML = div.innerHTML +  "<p>Codigo de estado: " + est +"Porcentaje: "+porceImpu +"</p>";
+  div.innerHTML = div.innerHTML +  "<p>Precio Neto: " + precioNeto + "</p>";
 
 });
