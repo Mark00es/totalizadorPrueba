@@ -9,6 +9,9 @@ function mostrarImpu(a) {
     if(a="AL"){
         resp=4.00;
     }
+    if(a="NV"){
+        resp=8.00;
+    }
     return resp;
   }
   
